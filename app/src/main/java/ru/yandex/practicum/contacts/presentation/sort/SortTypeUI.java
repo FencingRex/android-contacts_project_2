@@ -9,20 +9,13 @@ public class SortTypeUI implements ListDiffInterface<SortTypeUI> {
 
     private final SortType sortType;
     private final boolean selected;
-
     public boolean theSortAs(@NonNull SortTypeUI t){
         return this.hashCode() == t.hashCode();
     }
-    //@NonNull
-    //@Override
-    public  boolean equals(@NonNull SortTypeUI t){
-        return  this.equals(t);
-    }
-    public SortTypeUI(@NonNull SortType sortType, boolean selected) {
+    public SortTypeUI(@NonNull SortType sortType,boolean selected){
         this.sortType = sortType;
-        this.selected = selected;
+        this.selected =selected;
     }
-
     public SortType getSortType() {
         return sortType;
     }
@@ -32,7 +25,7 @@ public class SortTypeUI implements ListDiffInterface<SortTypeUI> {
     }
     @Override
     public  boolean theSameAs(@NonNull SortTypeUI t){
-        return  this.hashCode() == t.hashCode();
+        return  this.getSortType() == t.getSortType();
     }
     @Override
     public boolean equals(Object o) {

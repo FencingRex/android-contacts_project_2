@@ -17,15 +17,14 @@ public class ContactUi implements ListDiffInterface<ContactUi> {
     private ContactUi t;
     @Override
     public boolean theSameAs(@NonNull ContactUi t){
-        return this.t.hashCode() == t.hashCode();
+        return this.hashCode() == t.hashCode();
     }
 
-/*    @Override
     public boolean equals(@NonNull ContactUi t) {
-        return ListDiffInterface.super.equals(t);
+        return this.equals(t);
     }
 
- */
+
 
     public ContactUi(
             @NonNull String name,
