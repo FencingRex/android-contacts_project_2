@@ -14,7 +14,7 @@ public class SortTypeUI implements ListDiffInterface<SortTypeUI> {
     }
     public SortTypeUI(@NonNull SortType sortType,boolean selected){
         this.sortType = sortType;
-        this.selected =selected;
+        this.selected = selected;
     }
     public SortType getSortType() {
         return sortType;
